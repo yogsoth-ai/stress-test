@@ -22,10 +22,10 @@ Classic adversarial triangle: one agent attacks, one defends, one judges.
 
 | Parameter | S | M | L |
 |---|---|---|---|
-| 辩论轮数 | 4 | 8 | 12 |
-| 参与agent数 | 3 | 5 | 8 |
-| 覆盖维度数 | 3 | 5 | 7 |
-| 外部证据搜索次数 | 2 | 5 | 10 |
+| Debate rounds | 4 | 8 | 12 |
+| Participating agents | 3 | 5 | 8 |
+| Coverage dimensions | 3 | 5 | 7 |
+| External evidence searches | 2 | 5 | 10 |
 
 ## Orchestration
 

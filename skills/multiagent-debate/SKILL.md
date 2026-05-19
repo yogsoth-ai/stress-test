@@ -8,7 +8,7 @@ artifact-types: [gap, hypothesis, research-question, idea, approach, experiment-
 
 # Multi-Agent Debate Campaign
 
-Core question: **这个产物能否在结构化对抗辩论中存活？**
+Core question: **Can this artifact survive structured adversarial debate?**
 
 ## Methodology Sources
 
@@ -30,12 +30,12 @@ Core question: **这个产物能否在结构化对抗辩论中存活？**
 
 ## Budget Table
 
-| Parameter | S (快速) | M (标准) | L (深度) |
+| Parameter | S (Quick) | M (Standard) | L (Deep) |
 |---|---|---|---|
-| 辩论轮数 | 4 | 8 | 12 |
-| 参与agent数 | 3 | 5 | 8 |
-| 覆盖维度数 | 3 | 5 | 7 |
-| 外部证据搜索次数 | 2 | 5 | 10 |
+| Debate rounds | 4 | 8 | 12 |
+| Participating agents | 3 | 5 | 8 |
+| Coverage dimensions | 3 | 5 | 7 |
+| External evidence searches | 2 | 5 | 10 |
 
 ## Tactics
 

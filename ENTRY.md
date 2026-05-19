@@ -9,7 +9,7 @@ Research Artifact Stress-Testing Engine — from structured debate to logical ex
 
 ## Design Philosophy
 
-兵法书 (Strategy Book) mode. This file is a textbook, not a script. CC reads, internalizes principles, then autonomously constructs the validation approach for the specific artifact.
+Strategy Book mode. This file is a textbook, not a script. CC reads, internalizes principles, then autonomously constructs the validation approach for the specific artifact.
 
 Hard constraints only:
 - **Budget Gate**: Meet the strategy's quantitative floor (±10%) before completing
@@ -58,19 +58,19 @@ CC can skip the tactic layer and use SOPs directly when the task is simple enoug
 
 | Signal | Campaign |
 |--------|----------|
-| 需要对抗辩论验证、多视角评审 | → multiagent-debate |
-| 需要系统性攻击、假设挑战 | → red-teaming |
-| 需要预测失败模式、风险评估 | → failure-anticipation |
-| 需要探测关键依赖、因果必要性 | → counterfactual-probing |
-| 需要逻辑证伪、边界测试 | → adversarial-stress-testing |
+| Adversarial debate, multi-perspective review | → multiagent-debate |
+| Systematic attack, assumption challenge | → red-teaming |
+| Failure mode prediction, risk assessment | → failure-anticipation |
+| Critical dependency probing, causal necessity | → counterfactual-probing |
+| Logical falsification, boundary testing | → adversarial-stress-testing |
 
 ## Multi-Campaign Orchestration
 
 Campaigns can be composed:
-- **快速验证**: multiagent-debate (critic-defender-judge) 单轮
-- **标准验证**: red-teaming + counterfactual-probing
-- **深度验证**: 全部 5 campaigns 串联
-- **特定风险**: failure-anticipation + adversarial-stress-testing
+- **Quick validation**: multiagent-debate (critic-defender-judge) single round
+- **Standard validation**: red-teaming + counterfactual-probing
+- **Deep validation**: all 5 campaigns in sequence
+- **Targeted risk**: failure-anticipation + adversarial-stress-testing
 
 The orchestrator decides composition based on artifact type and validation needs.
 
