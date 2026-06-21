@@ -1,9 +1,18 @@
 ---
-name: perspective-rotation
-description: "Tactic: Sequential perspective evaluation with divergence aggregation. Each agent evaluates from a distinct viewpoint, then disagreements are surfaced and resolved."
+name: stress-test-perspective-rotation
+description: 'Tactic: Sequential perspective evaluation with divergence aggregation.
+  Each agent evaluates from a distinct viewpoint, then disagreements are surfaced
+  and resolved.'
 type: tactic
-used-by: [multiagent-debate]
-strategies: [society-of-mind, multi-perspective-panel]
+strategies:
+- society-of-mind
+- multi-perspective-panel
+dependencies:
+  sops:
+  - confidence-calibration
+  - debate-architect
+  - divergence-detection
+  - perspective-critic
 ---
 
 # Perspective Rotation Tactic
@@ -43,3 +52,18 @@ Sequential multi-perspective evaluation followed by divergence analysis and deli
 - Max deliberation rounds exhausted
 - Saturation detected (no position changes between rounds)
 - Irreconcilable disagreement identified (flagged for human review)
+
+<!-- BEGIN available-tables (generated) -->
+
+## Available SOPs
+
+Optional, no fixed order; the final leaf is always a sop.
+
+| SOP | When to use |
+| --- | --- |
+| confidence-calibration | Calibrates confidence scores based on debate progression. Determines whether to escalate, continue, or terminate based on cumulative evidence. |
+| debate-architect | Designs debate structure based on artifact type — selects attack vectors, assigns perspectives, determines escalation ladder, and configures round parameters. |
+| divergence-detection | Identifies agreement and disagreement patterns across multiple perspective evaluations. Maps consensus clusters and persistent divergence points. |
+| perspective-critic | Evaluates artifact from a specific assigned perspective. Produces assessment grounded in that viewpoint's values, priorities, and expertise. |
+
+<!-- END available-tables (generated) -->

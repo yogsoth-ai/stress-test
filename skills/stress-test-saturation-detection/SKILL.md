@@ -1,10 +1,13 @@
 ---
-name: saturation-detection
-description: Determines whether validation has reached saturation — no new weaknesses or failure modes being discovered. Used by all 5 campaigns as termination signal.
+name: stress-test-saturation-detection
+description: Determines whether validation has reached saturation — no new weaknesses
+  or failure modes being discovered. Used by all 5 campaigns as termination signal.
 execution: subagent
 prompt: ./prompt.md
 input: findings_accumulated (string), latest_iteration_findings (string)
-used-by: multiagent-debate, red-teaming, failure-anticipation, counterfactual-probing, adversarial-stress-testing
+dependencies:
+  sops:
+  - spawn-agent
 ---
 
 # Saturation Detection
@@ -38,3 +41,15 @@ Requires comparing accumulated findings against latest iteration to compute nove
 ## Budget
 
 One unit = one saturation check. Called after each tactic iteration.
+
+<!-- BEGIN available-tables (generated) -->
+
+## Available SOPs
+
+Optional, no fixed order; the final leaf is always a sop.
+
+| SOP | When to use |
+| --- | --- |
+| spawn-agent | Spawn a customized CC subagent with full MCP tool access. Used by SOPs that declare execution: subagent. |
+
+<!-- END available-tables (generated) -->

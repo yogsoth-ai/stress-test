@@ -1,9 +1,17 @@
 ---
-name: dialectical-escalation
-description: "Tactic: Progressive debate escalation based on confidence thresholds. Each round increases attack sophistication until defender collapses or proves resilient."
+name: stress-test-dialectical-escalation
+description: 'Tactic: Progressive debate escalation based on confidence thresholds.
+  Each round increases attack sophistication until defender collapses or proves resilient.'
 type: tactic
-used-by: [multiagent-debate]
-strategies: [critic-defender-judge, adversarial-escalation]
+strategies:
+- critic-defender-judge
+- adversarial-escalation
+dependencies:
+  sops:
+  - confidence-calibration
+  - debate-critic
+  - debate-defender
+  - debate-judge
 ---
 
 # Dialectical Escalation Tactic
@@ -40,3 +48,18 @@ Progressive pressure escalation — attack sophistication increases each round b
 - Defender confidence drops below 0.3 (collapsed)
 - Saturation detected (no new attack vectors found)
 - All escalation levels completed with confidence > 0.7 (survived)
+
+<!-- BEGIN available-tables (generated) -->
+
+## Available SOPs
+
+Optional, no fixed order; the final leaf is always a sop.
+
+| SOP | When to use |
+| --- | --- |
+| confidence-calibration | Calibrates confidence scores based on debate progression. Determines whether to escalate, continue, or terminate based on cumulative evidence. |
+| debate-critic | Generates structured criticism from attack stance using Toulmin model. Produces claims, grounds, warrants, and rebuttals targeting artifact weaknesses. |
+| debate-defender | Responds to attacks with counter-evidence and counter-arguments. Defends artifact using evidence, clarification, and rebuttal while acknowledging valid criticisms. |
+| debate-judge | Evaluates debate exchanges, adjudicates argument quality, and produces round verdicts with confidence scores and reasoning. |
+
+<!-- END available-tables (generated) -->
