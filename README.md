@@ -53,13 +53,13 @@ Everything else — execution order, iteration count, tactic selection, SOP comb
          │                 │                 │
          ▼                 ▼                 ▼
 ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
-│  Campaign   │  │  Campaign   │  │  Campaign   │  ... (×5)
+│  Campaign   │  │  Campaign   │  │  Campaign   │  ... (×6)
 │  SKILL.md   │  │  SKILL.md   │  │  SKILL.md   │
 └──────┬──────┘  └──────┬──────┘  └──────┬──────┘
        │                 │                 │
        ▼                 ▼                 ▼
 ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
-│  Strategy   │  │  Strategy   │  │  Strategy   │  ... (×25)
+│  Strategy   │  │  Strategy   │  │  Strategy   │  ... (×31)
 │  SKILL.md   │  │  SKILL.md   │  │  SKILL.md   │
 └──────┬──────┘  └──────┬──────┘  └──────┬──────┘
        │                 │                 │
@@ -83,13 +83,13 @@ Everything else — execution order, iteration count, tactic selection, SOP comb
 
 | Layer | Count |
 |-------|-------|
-| Campaigns | 5 |
-| Strategies | 25 |
+| Campaigns | 6 |
+| Strategies | 31 |
 | Tactics | 15 |
 | Import SOPs | 5 |
 | Cross-campaign shared SOPs | 4 |
 | Campaign-specific subagent SOPs | 49 |
-| **Total skill directories** | **103** |
+| **Total skill directories** | **110** |
 
 ---
 
