@@ -71,7 +71,7 @@ Everything else — execution order, iteration count, tactic selection, SOP comb
        │                 │                 │
        ▼                 ▼                 ▼
 ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
-│  Subagent   │  │  Subagent   │  │  Subagent   │  ... (×49+)
+│  Subagent   │  │  Subagent   │  │  Subagent   │  ... (×53)
 │  SKILL.md   │  │  SKILL.md   │  │  SKILL.md   │
 │  prompt.md  │  │  prompt.md  │  │  prompt.md  │
 └─────────────┘  └─────────────┘  └─────────────┘
@@ -89,7 +89,7 @@ Everything else — execution order, iteration count, tactic selection, SOP comb
 | Import SOPs | 5 |
 | Cross-campaign shared SOPs | 4 |
 | Campaign-specific subagent SOPs | 49 |
-| **Total skill directories** | **~103** |
+| **Total skill directories** | **103** |
 
 ---
 
